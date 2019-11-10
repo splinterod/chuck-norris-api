@@ -30,6 +30,7 @@
 
     </div>
 
+    <button type="button" id="buttonReload">Reload chuck!</button>
 </section>
 
 <!-- We need to load axios first! -->
@@ -58,6 +59,11 @@
     }
 
     fetchNorrisJSON();
+
+    document.getElementById("buttonReload").addEventListener("click", function( event ) {
+        // Affiche le compte courant de clics à l'intérieur de la div cliquée
+        fetchNorrisJSON();
+    }, false);
 
 </script>
 </body>
